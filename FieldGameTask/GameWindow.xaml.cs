@@ -62,17 +62,17 @@ namespace FieldGameTask
         private void Canvas_KeyDown(object sender, KeyEventArgs e)
         {
             //Move Down
-            if (e.Key == Key.S && Canvas.GetTop(rectangleFigure) + rectangleFigure.Height < canvasField.Height - 1.1)
+            if (e.Key == Key.S || e.Key == Key.Down && Canvas.GetTop(rectangleFigure) + rectangleFigure.Height < canvasField.Height - 1.1)
             {
                 Canvas.SetTop(rectangleFigure, Canvas.GetTop(rectangleFigure) + step);
             }
             //Move Up
-            else if (e.Key == Key.W && Canvas.GetTop(rectangleFigure) > 0)
+            else if (e.Key == Key.W || e.Key == Key.Up && Canvas.GetTop(rectangleFigure) > 0)
             {
                 Canvas.SetTop(rectangleFigure, Canvas.GetTop(rectangleFigure) - step);
             }
             //Move Left
-            else if (e.Key == Key.A && Canvas.GetLeft(rectangleFigure) > 0)
+            else if (e.Key == Key.A || e.Key == Key.Left && Canvas.GetLeft(rectangleFigure) > 0)
             {
                 Canvas.SetLeft(rectangleFigure, Canvas.GetLeft(rectangleFigure) - step);
 
